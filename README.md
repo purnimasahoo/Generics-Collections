@@ -38,4 +38,12 @@ HashMap allows null values as it doesn't have any checks like HashTable, while i
 
 14. Queues use offer() to add an element, poll() to remove the head of the queue, and peek() to look at the head of the queue.
 
+15. Difference between synchronized and concurrent collections in Java?
+
+Synchronized collection classes, Hashtable, Vector and the synchronized wrapper classes, Collections.synchronizedMap() and Collections.synchronizedList()provides a basic thread safe implementation of Map and List. However, in a highly concurrent environment, usage of synchronized collection classes is rarely useful as the entire collection needs to be locked in order to avoid ConcurrentModificationException during iteration.
+
+In Summary, concurrent collections use advanced techniques to achieve thread-safety without compromising Scalability. For example, ConcurrentHashMap only locks a certain portion of Map while Hashtable locks a full map while doing iteration or performing any write operation.
+
+
+
 
